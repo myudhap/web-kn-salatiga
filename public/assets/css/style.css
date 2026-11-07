@@ -1,0 +1,700 @@
+:root {
+	--navy-deep: #152238;
+	--navy: #152238;
+	--gold: #B08A3E;
+	--gold-light: #CBA355;
+	--paper: #FAFAF8;
+	--paper-alt: #F3F3F0;
+	--justice-red: #8A2F3A;
+	--ink: #181A1F;
+	--slate: #6B7078;
+	--line: #E7E6E1;
+
+	--bs-primary: #152238;
+	--bs-primary-rgb: 21, 34, 56;
+	--bs-body-font-family: 'Plus Jakarta Sans', sans-serif;
+	--bs-body-color: var(--ink);
+	--bs-body-bg: var(--paper);
+	--bs-border-color: var(--line);
+	--bs-border-radius: 16px;
+	--bs-border-radius-lg: 16px;
+	--bs-border-radius-sm: 8px;
+	--bs-border-radius-pill: 999px;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Space Grotesk', sans-serif;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+}
+
+.mono {
+	font-family: 'IBM Plex Mono', monospace;
+	letter-spacing: 0.02em;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* ===== Accessibility / skip link ===== */
+.skip-link {
+	position: absolute;
+	left: -999px;
+	top: 0;
+	background: var(--gold);
+	color: var(--navy-deep);
+	padding: 10px 16px;
+	z-index: 1100;
+	font-weight: 700;
+	border-radius: 0 0 6px 0;
+}
+
+.skip-link:focus {
+	left: 0;
+}
+
+/* ===== Utility bar ===== */
+.util-bar {
+	background: var(--navy-deep);
+	color: #C9CFDD;
+	font-size: 12.5px;
+}
+
+.util-bar button {
+	background: none;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	color: #DCE1EC;
+	font-size: 11.5px;
+	padding: 3px 9px;
+	border-radius: 999px;
+}
+
+.util-bar button:hover {
+	border-color: var(--gold-light);
+	color: var(--gold-light);
+}
+
+/* ===== Navbar ===== */
+.navbar-kejari {
+	background: rgba(21, 34, 56, 0.85);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+}
+
+.navbar-kejari .nav-link {
+	color: #D6DAE5;
+	font-weight: 500;
+}
+
+.navbar-kejari .nav-link:hover,
+.navbar-kejari .nav-link.active {
+	color: #fff;
+}
+
+.navbar-kejari .navbar-brand small {
+	display: block;
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 10px;
+	letter-spacing: 0.12em;
+	color: var(--gold-light);
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.navbar-kejari .navbar-brand span {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 17px;
+	font-weight: 600;
+	color: #fff;
+	line-height: 1.2;
+}
+
+.btn-emas {
+	background: var(--gold);
+	border-color: var(--gold);
+	color: var(--navy-deep);
+	font-weight: 700;
+}
+
+.btn-emas:hover {
+	background: var(--gold-light);
+	border-color: var(--gold-light);
+	color: var(--navy-deep);
+}
+
+.btn-outline-cahaya {
+	border-color: rgba(255, 255, 255, 0.35);
+	color: #fff;
+}
+
+.btn-outline-cahaya:hover {
+	border-color: #fff;
+	background: rgba(255, 255, 255, 0.08);
+	color: #fff;
+}
+
+/* ===== Hero ===== */
+.hero {
+	background: var(--navy-deep);
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero-glow {
+	position: absolute;
+	top: -10%;
+	right: -8%;
+	width: 600px;
+	height: 600px;
+	z-index: 0;
+	background: radial-gradient(circle, rgba(201, 166, 100, 0.16) 0%, rgba(201, 166, 100, 0) 70%);
+	pointer-events: none;
+}
+
+.hero h1 {
+	font-size: 42px;
+	line-height: 1.18;
+	font-weight: 500;
+}
+
+.hero h1 .accent {
+	background: linear-gradient(100deg, var(--gold-light) 0%, #E8C989 50%, var(--gold-light) 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.hero-eyebrow {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 12px;
+	letter-spacing: 0.14em;
+	color: var(--gold-light);
+	text-transform: uppercase;
+}
+
+.seal-ring {
+	width: 220px;
+	height: 220px;
+	border-radius: 50%;
+	border: 1px solid rgba(201, 166, 100, 0.45);
+	animation: markFade 700ms ease-out both;
+	animation-delay: 150ms;
+}
+
+@keyframes markFade {
+	0% {
+		opacity: 0;
+		transform: scale(.94)
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1)
+	}
+}
+
+.seal-ring .seal-title {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 9.5px;
+	letter-spacing: 0.16em;
+	color: var(--gold-light);
+	text-transform: uppercase;
+}
+
+.seal-ring .seal-sub {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 8.5px;
+	color: #7C8296;
+}
+
+/* ===== Section heading ===== */
+.eyebrow {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 11.5px;
+	letter-spacing: 0.14em;
+	color: var(--gold);
+	text-transform: uppercase;
+}
+
+.section-link {
+	font-weight: 700;
+	font-size: 13.5px;
+	color: var(--navy);
+	border-bottom: 2px solid var(--gold);
+	padding-bottom: 2px;
+}
+
+.section-link:hover {
+	color: var(--gold);
+}
+
+/* ===== Struktur organisasi ===== */
+.struktur-top {
+	position: relative;
+	padding-bottom: 44px;
+}
+
+.struktur-top::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 1px;
+	height: 44px;
+	background: var(--line);
+}
+
+.struktur-grid {
+	position: relative;
+	padding-top: 44px;
+}
+
+.struktur-grid::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 8.3%;
+	right: 8.3%;
+	height: 1px;
+	background: var(--line);
+}
+
+.pejabat-card {
+	position: relative;
+}
+
+.pejabat-card.small::before {
+	content: '';
+	position: absolute;
+	top: -44px;
+	left: 50%;
+	width: 1px;
+	height: 44px;
+	background: var(--line);
+	transform: translateX(-50%);
+}
+
+.pejabat-photo {
+	border-radius: 50%;
+	overflow: hidden;
+	background: var(--paper-alt);
+	border: 1px solid var(--line);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 16px;
+}
+
+.pejabat-photo img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.pejabat-card.kajari .pejabat-photo {
+	width: 132px;
+	height: 132px;
+	border-color: var(--gold-light);
+	border-width: 2px;
+}
+
+.pejabat-card.small .pejabat-photo {
+	width: 88px;
+	height: 88px;
+}
+
+.pejabat-photo svg {
+	width: 42%;
+	height: 42%;
+	opacity: .35;
+}
+
+.pejabat-jabatan {
+	display: inline-block;
+	font-size: 11.5px;
+	font-weight: 700;
+	color: var(--gold);
+	text-transform: uppercase;
+	letter-spacing: .03em;
+}
+
+.pejabat-card.kajari .pejabat-jabatan {
+	background: var(--navy-deep);
+	color: #fff;
+	padding: 5px 14px;
+	border-radius: 999px;
+	font-size: 12px;
+}
+
+/* ===== Cards ===== */
+.stat-box {
+	border-right: 1px solid var(--line);
+}
+
+.stat-box:last-child {
+	border-right: none;
+}
+
+.stat-box .num {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 30px;
+	color: var(--navy);
+	font-weight: 700;
+}
+
+.stat-box .lbl {
+	font-size: 12.5px;
+	color: var(--slate);
+}
+
+.card-berita {
+	transition: box-shadow .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.card-berita:hover {
+	border-color: #C7C4BA;
+	box-shadow: 0 12px 28px rgba(21, 34, 56, 0.08);
+	transform: translateY(-2px);
+}
+
+.card-berita .thumb {
+	height: 500px;
+	background: var(--navy-deep);
+	position: relative;
+	overflow: hidden;
+}
+
+.card-berita .thumb img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-berita .thumb::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	background: linear-gradient(180deg, rgba(21, 34, 56, 0) 45%, rgba(21, 34, 56, .65) 100%);
+}
+
+.card-berita .thumb .badge {
+	position: relative;
+	z-index: 2;
+}
+
+.news-docket {
+	font-size: 11px;
+	color: var(--slate);
+}
+
+.news-excerpt-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	font-size: 13.5px;
+	line-height: 1.6;
+	min-height: 0;
+}
+
+.card-kegiatan {
+	height: 260px;
+	border-radius: 16px;
+	overflow: hidden;
+	position: relative;
+}
+
+.card-kegiatan img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card-kegiatan .overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(21, 34, 56, 0) 35%, rgba(21, 34, 56, .92) 100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 16px;
+	color: #fff;
+}
+
+.card-layanan {
+	background: rgba(255, 255, 255, .04);
+	border: 1px solid rgba(255, 255, 255, .09);
+	transition: border-color .2s ease, background .2s ease, transform .2s ease;
+}
+
+.card-layanan:hover {
+	border-color: var(--gold-light);
+	background: rgba(255, 255, 255, .07);
+	transform: translateY(-3px);
+}
+
+.card-layanan p {
+	color: #A8AFC2;
+}
+
+.cara-step {
+	border-right: 1px solid var(--line);
+}
+
+.cara-step:last-child {
+	border-right: none;
+}
+
+.step-no {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 34px;
+	font-weight: 700;
+	color: transparent;
+	-webkit-text-stroke: 1.5px var(--gold);
+}
+
+section#layanan {
+	background: var(--navy-deep);
+	color: #fff;
+}
+
+section#layanan .section-link {
+	color: #fff;
+	border-color: var(--gold-light);
+}
+
+/* Kartu form pengaduan */
+.form-label {
+	font-weight: 600;
+	font-size: 13.5px;
+	color: var(--ink);
+	margin-top: 14px;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width:991.98px) {
+	.struktur-grid {
+		padding-top: 24px;
+	}
+
+	.struktur-grid::before {
+		display: none;
+	}
+
+	.pejabat-card.small::before {
+		height: 24px;
+		top: -24px;
+	}
+
+	.struktur-top::after {
+		height: 24px;
+	}
+
+	.stat-box {
+		border-right: none;
+		border-bottom: 1px solid var(--line);
+	}
+
+	.cara-step {
+		border-right: none;
+		border-bottom: 1px solid var(--line);
+	}
+}
+
+body.contrast {
+	--bs-body-bg: #000;
+	--bs-body-color: #fff;
+	--bs-border-color: #444;
+	--paper-alt: #0d0d0d;
+	--line: #444;
+	--slate: #e4e4e4;
+	--gold: #FFD766;
+	--gold-light: #FFE79A;
+}
+
+/* ===== Sejarah timeline ===== */
+.sejarah-item {
+	border-left: 2px solid var(--line);
+	padding-left: 20px;
+	position: relative;
+}
+
+.sejarah-item::before {
+	content: '';
+	position: absolute;
+	left: -6px;
+	top: 4px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--gold);
+}
+
+.sejarah-tahun {
+	font-family: 'IBM Plex Mono', monospace;
+	font-size: 12px;
+	color: var(--gold);
+	font-weight: 600;
+}
+
+/* ===== Logo & Makna ===== */
+.logo-item {
+	text-align: center;
+	padding: 24px 16px;
+}
+
+.logo-item .icon-wrap {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto 16px;
+	border-radius: 50%;
+	background: var(--paper-alt);
+	border: 1px solid var(--line);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo-item .icon-wrap svg {
+	width: 30px;
+	height: 30px;
+}
+
+.logo-item h4 {
+	font-size: 14.5px;
+	margin-bottom: 8px;
+}
+
+.logo-item p {
+	font-size: 12.5px;
+	color: var(--slate);
+	line-height: 1.6;
+	margin: 0;
+}
+
+/* ===== Tri Krama Adhyaksa ===== */
+.tk-card {
+	background: var(--navy-deep);
+	border-radius: 16px;
+	padding: 32px 26px;
+	color: #fff;
+	height: 100%;
+}
+
+.tk-card .tk-label {
+	font-family: 'Space Grotesk', sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--gold-light);
+	margin-bottom: 14px;
+	display: block;
+}
+
+.tk-card p {
+	font-size: 13.5px;
+	color: #B7BDCC;
+	line-height: 1.7;
+	margin: 0;
+}
+
+/* ===== Navbar dropdown (submenu Profil) ===== */
+.navbar-kejari .dropdown-menu {
+	border: 1px solid var(--line);
+	border-radius: 12px;
+	padding: 8px;
+	margin-top: 10px;
+	box-shadow: 0 12px 28px rgba(21, 34, 56, 0.12);
+}
+
+.navbar-kejari .dropdown-item {
+	font-size: 13.5px;
+	font-weight: 500;
+	color: var(--ink);
+	border-radius: 8px;
+	padding: 8px 14px;
+}
+
+.navbar-kejari .dropdown-item:hover,
+.navbar-kejari .dropdown-item:focus {
+	background: var(--paper-alt);
+	color: var(--navy);
+}
+
+.navbar-kejari .dropdown-toggle::after {
+	border-top-color: var(--gold-light);
+}
+
+/* ===== Pagination ===== */
+.kj-pagination {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 6px;
+	padding: 0;
+	margin: 0;
+}
+
+.kj-page-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 38px;
+	height: 38px;
+	padding: 0 12px;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	font-size: 13.5px;
+	font-weight: 600;
+	color: var(--ink);
+	background: var(--card, #fff);
+	transition: border-color .15s ease, background .15s ease, color .15s ease;
+}
+
+.kj-page-link:hover {
+	border-color: var(--gold-light);
+	background: var(--paper-alt);
+	color: var(--navy);
+}
+
+.kj-page-link.kj-active {
+	background: var(--gold);
+	border-color: var(--gold);
+	color: var(--navy-deep);
+}
+
+.kj-page-link.kj-active:hover {
+	background: var(--gold);
+	color: var(--navy-deep);
+}
+
+.kj-page-step {
+	font-size: 12.5px;
+	color: var(--slate);
+}
+
+.kj-page-link.kj-disabled {
+	color: #C4C1B8;
+	border-color: var(--line);
+	background: transparent;
+	cursor: default;
+}
+
+@media (max-width:480px) {
+	.kj-page-step {
+		display: none;
+	}
+}
